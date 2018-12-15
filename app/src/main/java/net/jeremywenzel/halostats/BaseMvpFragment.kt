@@ -3,9 +3,9 @@ package net.jeremywenzel.halostats
 import android.os.Bundle
 import android.support.v4.app.Fragment
 
-abstract class BaseMvpFragment<P : BasePresenter>: BaseView, Fragment() {
+abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fragment() {
 
-    private lateinit var mPresenter: BasePresenter
+    private lateinit var mPresenter: BasePresenter<V>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

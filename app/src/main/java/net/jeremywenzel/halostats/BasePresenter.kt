@@ -1,6 +1,7 @@
 package net.jeremywenzel.halostats
 
-interface BasePresenter {
+interface BasePresenter<V : BaseView> {
+    fun attachView(view: V)
     fun onStart()
     fun onResume()
     fun onPause()
