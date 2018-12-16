@@ -1,7 +1,8 @@
-package net.jeremywenzel.halostats
+package net.jeremywenzel.halostats.features
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import net.jeremywenzel.halostats.Logger
 
 abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fragment() {
 

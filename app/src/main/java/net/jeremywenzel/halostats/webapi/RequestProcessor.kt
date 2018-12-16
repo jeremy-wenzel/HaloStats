@@ -1,5 +1,6 @@
-package net.jeremywenzel.halostats
+package net.jeremywenzel.halostats.webapi
 
+import net.jeremywenzel.halostats.Logger
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.lang.Exception

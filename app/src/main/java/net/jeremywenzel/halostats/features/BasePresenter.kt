@@ -1,4 +1,4 @@
-package net.jeremywenzel.halostats
+package net.jeremywenzel.halostats.features
 
 interface BasePresenter<V : BaseView> {
     fun attachView(view: V)

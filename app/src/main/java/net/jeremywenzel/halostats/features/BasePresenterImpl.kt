@@ -1,4 +1,4 @@
-package net.jeremywenzel.halostats
+package net.jeremywenzel.halostats.features
 
 abstract class BasePresenterImpl<V: BaseView> : BasePresenter<V> {
     protected var mView: V? = null

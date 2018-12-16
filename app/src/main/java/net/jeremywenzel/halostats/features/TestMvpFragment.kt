@@ -1,11 +1,13 @@
-package net.jeremywenzel.halostats
+package net.jeremywenzel.halostats.features
 
 import android.os.AsyncTask
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import okhttp3.Request
+import net.jeremywenzel.halostats.webapi.requests.EnemiesRequest
+import net.jeremywenzel.halostats.R
+import net.jeremywenzel.halostats.webapi.RequestProcessor
 
 class TestMvpFragment: BaseMvpFragment<TestView, TestPresenter>(), TestView {
     override fun createPresenter(): TestPresenter {
@@ -24,9 +26,8 @@ class TestMvpFragment: BaseMvpFragment<TestView, TestPresenter>(), TestView {
 
     private class TestAsync: AsyncTask<Void, Void, Void?>() {
         override fun doInBackground(vararg p0: Void?): Void? {
-            RequestProcessor.makeRequest(Request.Builder().url("https://www.google.com").build())
+            RequestProcessor.makeRequest(EnemiesRequest().getOkHttpRequest())
             return null
         }
-
     }
 }
