@@ -16,31 +16,37 @@ abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fra
 
     override fun onStart() {
         super.onStart()
+        Logger.d("in onStart")
         mPresenter.onStart()
     }
 
     override fun onResume() {
         super.onResume()
+        Logger.d("in onResume")
         mPresenter.onResume()
     }
 
     override fun onPause() {
         super.onPause()
+        Logger.d("in onPause")
         mPresenter.onPause()
     }
 
     override fun onStop() {
         super.onStop()
+        Logger.d("in onStop")
         mPresenter.onStart()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+        Logger.d("in onDestroyView")
         mPresenter.onDestroyView()
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        Logger.d("in onDestroy")
         mPresenter.onDestroy()
     }
 }
