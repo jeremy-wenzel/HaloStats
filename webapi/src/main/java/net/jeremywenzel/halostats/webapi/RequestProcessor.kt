@@ -2,6 +2,7 @@ package net.jeremywenzel.halostats.webapi
 
 import android.support.annotation.WorkerThread
 import net.jeremywenzel.halostats.core.util.Logger
+import net.jeremywenzel.halostats.webapi.parsers.BaseResponseParser
 import net.jeremywenzel.halostats.webapi.requests.BaseHaloRequest
 import okhttp3.OkHttpClient
 import okhttp3.Response

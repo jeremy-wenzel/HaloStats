@@ -1,5 +1,6 @@
 package net.jeremywenzel.halostats.webapi
 
+import net.jeremywenzel.halostats.webapi.parsers.EnemyResponseParser
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Test

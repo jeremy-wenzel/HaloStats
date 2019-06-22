@@ -1,4 +1,4 @@
-package net.jeremywenzel.halostats.webapi
+package net.jeremywenzel.halostats.webapi.parsers
 
 import com.github.cliftonlabs.json_simple.JsonArray
 import com.github.cliftonlabs.json_simple.JsonObject
