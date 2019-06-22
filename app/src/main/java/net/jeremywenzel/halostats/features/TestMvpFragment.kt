@@ -26,7 +26,7 @@ class TestMvpFragment: BaseMvpFragment<TestView, TestPresenter>(), TestView {
 
     private class TestAsync: AsyncTask<Void, Void, Void?>() {
         override fun doInBackground(vararg p0: Void?): Void? {
-            RequestProcessor.makeRequest(EnemiesRequest().getOkHttpRequest())
+            RequestProcessor.makeRequest(EnemiesRequest())
             return null
         }
     }
