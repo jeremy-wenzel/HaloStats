@@ -2,7 +2,7 @@ package net.jeremywenzel.halostats.features
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import net.jeremywenzel.halostats.Logger
+import net.jeremywenzel.halostats.core.util.Logger
 
 abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fragment() {
 
