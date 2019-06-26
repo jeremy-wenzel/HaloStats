@@ -1,4 +1,4 @@
-package net.jeremywenzel.halostats.webapi
+package net.jeremywenzel.halostats.webapi.parsers
 
 import java.io.InputStream
 

@@ -8,7 +8,7 @@ import java.io.InputStream
 
 class EnemyResponseParser : BaseResponseParser<ArrayList<Enemy>>() {
     override fun parseResponse(byteStream: InputStream): ArrayList<Enemy> {
-        val jsonArray = getEnemyJsonArray(byteStream)
+        val jsonArray = getJsonArrayFromInputStream(byteStream)
         val returnList = ArrayList<Enemy>()
         for (i in 0 until jsonArray.size) {
             val jsonObject = jsonArray[i] as JsonObject
@@ -16,11 +16,6 @@ class EnemyResponseParser : BaseResponseParser<ArrayList<Enemy>>() {
         }
 
         return returnList
-    }
-
-    private fun getEnemyJsonArray(byteStream: InputStream): JsonArray {
-        val jsonString = getStringFromByteStream(byteStream)
-        return Jsoner.deserialize(jsonString, JsonArray())
     }
 
     private fun getEnemyFromJsonObject(jsonObject: JsonObject): Enemy {

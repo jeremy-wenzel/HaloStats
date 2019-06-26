@@ -1,0 +1,49 @@
+package net.jeremywenzel.halostats.webapi.parsers
+
+import net.jeremywenzel.halostats.core.haloapi.ArenaServiceRecord
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
+import org.junit.Before
+import org.junit.Test
+import java.io.InputStream
+
+class ArenaServiceRecordProcessingTest: BaseProcessingTest() {
+
+    lateinit var serviceRecord: ArenaServiceRecord
+
+    @Before
+    fun `Parse Input Stream`() {
+        val inputStream: InputStream = getResponseInputStream("ArenaServiceRecordRequest.json")
+        serviceRecord = ArenaServiceRecordResponseParser().parseResponse(inputStream)[0] // Should be the first one
+    }
+
+    @Test
+    fun `Arena Service Record Parsing Test`() {
+        assertNotNull(serviceRecord)
+    }
+
+    @Test
+    fun `Arena Service Record Kills Parsing Test`() {
+        assertEquals(8143, serviceRecord.kills)
+    }
+
+    @Test
+    fun `Arena Service Record Deaths Parsing Test`() {
+        assertEquals(7205,serviceRecord.deaths)
+    }
+
+    @Test
+    fun `Arena Service Record Assists Parsing Test`() {
+        assertEquals(2409, serviceRecord.assists)
+    }
+
+    @Test
+    fun `Arena Service Record Wins Parsing Test`() {
+        assertEquals(296,serviceRecord.wins)
+    }
+
+    @Test
+    fun `Arena Service Record Loses Parsing Test`() {
+        assertEquals(322,serviceRecord.loses)
+    }
+}

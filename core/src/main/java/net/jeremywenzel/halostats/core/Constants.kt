@@ -43,14 +43,14 @@ object Constants {
 
     /* Stats URLs */
     val STATS = "stats"
-    val SERVICERECORDS = "/servicerecords"
+    val SERVICERECORDS = "servicerecords"
     val ARENA = "arena"
     val CAMPAIGN = "campaign"
     val CUSTOM = "custom"
     val WARZONE = "warzone"
-    val PLAYERS_PARAM = "?players="
+    val PLAYERS_PARAM = "players"
     val SEASON_ID_PARAM = "&seasonId="
-    val PLAYERS = "/players"
+    val PLAYERS = "players"
     val MATCHES = "/matches?"
     val MODES_PARAM = "modes="
     val START_PARAM = "start="
