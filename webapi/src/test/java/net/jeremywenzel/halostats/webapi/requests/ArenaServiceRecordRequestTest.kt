@@ -1,7 +1,6 @@
 package net.jeremywenzel.halostats.webapi.requests
 
 import net.jeremywenzel.halostats.core.haloapi.GamerTag
-import net.jeremywenzel.halostats.webapi.requests.ArenaServiceRecordRequest
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

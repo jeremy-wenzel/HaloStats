@@ -6,7 +6,7 @@ import net.jeremywenzel.halostats.webapi.parsers.ArenaServiceRecordResponseParse
 import okhttp3.HttpUrl
 import java.net.URLEncoder
 
-class ArenaServiceRecordRequest(val gamerTags: ArrayList<GamerTag>, val seasonId: String = ""): BaseHaloRequest<ArenaServiceRecordResponseParser>() {
+class ArenaServiceRecordRequest(val gamerTags: ArrayList<GamerTag>, val seasonId: String = "") : BaseHaloRequest<ArenaServiceRecordResponseParser>() {
     override fun getDownloadUrl(): String {
         val builder: HttpUrl.Builder = buildBase().addPathSegment(Constants.STATS)
                 .addPathSegment(Constants.H5)
@@ -22,11 +22,9 @@ class ArenaServiceRecordRequest(val gamerTags: ArrayList<GamerTag>, val seasonId
         return builder.toString()
     }
 
-    private fun buildCommaSeparatedQueryParameter(gamerTags: ArrayList<GamerTag>): String {
-        return URLEncoder.encode(gamerTags.joinToString { it.gamerTag }, "UTF-8")
-    }
+    private fun buildCommaSeparatedQueryParameter(gamerTags: ArrayList<GamerTag>): String =
+            URLEncoder.encode(gamerTags.joinToString { it.gamerTag }, "UTF-8")
 
-    override fun getResponseParser(): ArenaServiceRecordResponseParser {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+
+    override fun getResponseParser(): ArenaServiceRecordResponseParser = ArenaServiceRecordResponseParser()
 }
