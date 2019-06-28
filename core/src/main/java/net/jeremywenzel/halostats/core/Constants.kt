@@ -40,6 +40,7 @@ object Constants {
     val CROP_PARAM = "&crop="
     val CROP_FULL = "full"
     val CROP_PORTRAIT = "portrait"
+    val APPEARANCE = "appearance"
 
     /* Stats URLs */
     val STATS = "stats"
