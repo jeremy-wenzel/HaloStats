@@ -36,6 +36,9 @@ class MultiplayerMapProcessingTest: BaseProcessingTest() {
                 "https://content.halocdn.com/media/Default/games/halo-5-guardians/map-images/arena/arena_maps_sustain_array05-d6b9b16e1d554e96b1ff594945140f0d.jpg")
     }
 
+    /**
+     * Just a quick method to verify that map and the information in it.
+     */
     private fun verifyMap(map: MultiplayerMap, expectedName: String?, expectedDesc: String?, expectedUrl: String) {
         if (expectedName == null) {
             assertNull(map.name)
