@@ -18,7 +18,7 @@ object Constants {
     val GAME_VARIANTS = "/game-variants"
     val IMPULSES = "/impulses"
     val MAP_VARIANTS = "/map-variants"
-    val MAPS = "/maps"
+    val MAPS = "maps"
     val MEDALS = "/medals"
     val PLAYLISTS = "/playlists"
     val REQUISITION_PACKS = "/requisition-packs"
