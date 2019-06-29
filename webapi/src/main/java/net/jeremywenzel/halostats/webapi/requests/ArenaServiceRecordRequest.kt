@@ -6,9 +6,9 @@ import net.jeremywenzel.halostats.webapi.parsers.ArenaServiceRecordResponseParse
 import okhttp3.HttpUrl
 import java.net.URLEncoder
 
-class ArenaServiceRecordRequest(val gamerTags: ArrayList<GamerTag>, val seasonId: String = "") : BaseHaloRequest<ArenaServiceRecordResponseParser>() {
+class ArenaServiceRecordRequest(private val gamerTags: ArrayList<GamerTag>, private val seasonId: String = "") : BaseHaloRequest<ArenaServiceRecordResponseParser>() {
     override fun getDownloadUrl(): String {
-        val builder: HttpUrl.Builder = buildBase().addPathSegment(Constants.STATS)
+        val builder: HttpUrl.Builder = buildHaloBaseUrl().addPathSegment(Constants.STATS)
                 .addPathSegment(Constants.H5)
                 .addPathSegment(Constants.SERVICERECORDS)
                 .addPathSegment(Constants.ARENA)

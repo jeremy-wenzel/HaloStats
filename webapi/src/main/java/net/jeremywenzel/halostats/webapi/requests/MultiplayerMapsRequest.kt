@@ -5,7 +5,7 @@ import net.jeremywenzel.halostats.webapi.parsers.ArenaServiceRecordResponseParse
 
 class MultiplayerMapsRequest: BaseHaloMetadataRequest<ArenaServiceRecordResponseParser>() {
     override fun getDownloadUrl(): String {
-        return buildBase()
+        return buildHaloBaseUrl()
                 .addPathSegment(Constants.MAPS)
                 .toString()
     }

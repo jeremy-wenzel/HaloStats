@@ -6,7 +6,7 @@ import net.jeremywenzel.halostats.webapi.parsers.EnemyResponseParser
 class EnemiesRequest: BaseHaloMetadataRequest<EnemyResponseParser>() {
 
     override fun getDownloadUrl(): String {
-        return buildBase().addPathSegment(Constants.ENEMIES).toString()
+        return BaseHaloMetadataRequest.buildHaloBaseUrl().addPathSegment(Constants.ENEMIES).toString()
     }
 
     override fun getResponseParser(): EnemyResponseParser = EnemyResponseParser()

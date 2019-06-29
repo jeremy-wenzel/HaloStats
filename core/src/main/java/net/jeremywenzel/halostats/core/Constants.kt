@@ -34,7 +34,7 @@ object Constants {
     val PROFILE_URL = "/profile$H5/profiles"
     val PROFILE = "profile"
     val PROFILES = "profiles"
-    val EMBLEM = "/emblem"
+    val EMBLEM = "emblem"
     val SPARTAN = "/spartan"
     val SIZE_PARAM = "?size="
     val CROP_PARAM = "&crop="

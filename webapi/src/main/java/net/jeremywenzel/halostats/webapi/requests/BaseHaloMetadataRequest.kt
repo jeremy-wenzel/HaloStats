@@ -5,10 +5,12 @@ import net.jeremywenzel.halostats.webapi.parsers.BaseResponseParser
 import okhttp3.HttpUrl
 
 abstract class BaseHaloMetadataRequest<T> : BaseHaloRequest<T>() {
-    override fun buildBase(): HttpUrl.Builder {
-        return super.buildBase()
-                .addPathSegment(Constants.METADATA_STR)
-                .addPathSegment(Constants.H5)
-                .addPathSegment(Constants.METADATA_STR)
+    companion object {
+        fun buildHaloBaseUrl(): HttpUrl.Builder {
+            return BaseHaloRequest.buildHaloBaseUrl()
+                    .addPathSegment(Constants.METADATA_STR)
+                    .addPathSegment(Constants.H5)
+                    .addPathSegment(Constants.METADATA_STR)
+        }
     }
 }

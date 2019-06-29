@@ -4,16 +4,25 @@ import net.jeremywenzel.halostats.core.Constants
 import okhttp3.HttpUrl
 import okhttp3.Request
 
+/**
+ *
+ */
 abstract class BaseHaloRequest<T> {
 
-    private val apiKeyHeader = "Ocp-Apim-Subscription-Key"
+    companion object {
+        val apiKeyHeader = "Ocp-Apim-Subscription-Key"
 
-    protected open fun buildBase(): HttpUrl.Builder {
-        return HttpUrl.Builder().scheme(Constants.HTTPS_SCHEME).host(Constants.BASE_HALO_API)
+        /**
+         *
+         */
+        fun buildHaloBaseUrl(): HttpUrl.Builder {
+            return HttpUrl.Builder().scheme(Constants.HTTPS_SCHEME).host(Constants.BASE_HALO_API)
+        }
     }
 
-    protected abstract fun getDownloadUrl(): String
-
+    /**
+     *
+     */
     fun getOkHttpRequest(): Request {
         return Request.Builder()
                 .url(getDownloadUrl())
@@ -21,5 +30,13 @@ abstract class BaseHaloRequest<T> {
                 .build()
     }
 
+    /**
+     *
+     */
+    protected abstract fun getDownloadUrl(): String
+
+    /**
+     *
+     */
     protected abstract fun getResponseParser(): T
 }

@@ -9,7 +9,7 @@ class PlayerAppearanceRequest(private val gamerTag: GamerTag) : BaseHaloRequest<
     override fun getResponseParser(): PlayerAppearanceResponseParser = PlayerAppearanceResponseParser()
 
     override fun getDownloadUrl(): String {
-        val builder = buildBase()
+        val builder = buildHaloBaseUrl()
                 .addPathSegment(Constants.PROFILE)
                 .addPathSegment(Constants.H5)
                 .addPathSegment(Constants.PROFILES)
