@@ -1,9 +1,5 @@
 package net.jeremywenzel.halostats.webapi.parsers
 
-import com.github.cliftonlabs.json_simple.JsonArray
-import com.github.cliftonlabs.json_simple.JsonKey
-import com.github.cliftonlabs.json_simple.JsonObject
-import com.github.cliftonlabs.json_simple.Jsoner
 import com.google.gson.Gson
 import net.jeremywenzel.halostats.core.util.Logger
 import java.io.IOException
@@ -24,35 +20,16 @@ abstract class BaseResponseParser<T> {
      * @param byteStream The [InputStream] byte stream from the [okhttp3.ResponseBody]
      * @return The desired object that should be in the response
      */
-     open fun parseResponse(byteStream: InputStream): T {
-        return getObjectFromByteStream(byteStream, getClassType())
-    }
-
-    abstract fun getClassType(): Class<T>
-
-    /**
-     * Gets a [JsonArray] from the [InputStream]. This is typically used when we know the
-     * response of a request will be a [JsonArray]
-     *
-     * @param inputStream The [InputStream] of [okhttp3.ResponseBody] to a request
-     * @return A [JsonArray] of the stream
-     */
-    protected fun getJsonArrayFromInputStream(inputStream: InputStream): JsonArray {
-        val jsonString = getStringFromByteStream(inputStream)
-        return Jsoner.deserialize(jsonString, JsonArray())
+    open fun parseResponse(byteStream: InputStream): T {
+        return getObjectFromByteStream(byteStream, getDeserailizedClassType())
     }
 
     /**
-     * Gets a [JsonObject] from the [InputStream]. This is typically used when we know the
-     * response of a request will be a [JsonObject]
+     * Gets the class type for deserialization
      *
-     * @param inputStream The [InputStream] of [okhttp3.ResponseBody] to a request
-     * @return A [JsonObject] of the stream
+     * @return The class type that is going to be used for deserialization
      */
-    protected fun getJsonObjectFromInputStream(inputStream: InputStream): JsonObject {
-        val jsonString = getStringFromByteStream(inputStream)
-        return Jsoner.deserialize(jsonString, JsonObject())
-    }
+    abstract fun getDeserailizedClassType(): Class<T>
 
     /**
      * Gets the string object from the [InputStream]
@@ -77,48 +54,14 @@ abstract class BaseResponseParser<T> {
     }
 
     /**
-     * Gets the [JsonKey] interface object with [String] defaultValue. The string defaultValue is empty by default
+     * Gets the desired object from the byte stream assuming the byte stream can be deserialized
+     * to the desired object
      *
-     * @param key The string key
-     * @param defaultValue The string default
-     * @return A JsonKey interface object
+     * @param byteStream The [InputStream] object containing the data to deserialize
+     * @param klass The desired class to deserialize to
+     * @return An instance of the desired object
      */
-    protected fun getJsonKeyWithStringValue(key: String, defaultValue: String = ""): JsonKey {
-        return getJsonKeyFromKeyAndValue(key, defaultValue)
-    }
-
-    /**
-     * Gets the [JsonKey] interface object with [Int] defaultValue. The string defaultValue is empty by default
-     *
-     * @param key The string key
-     * @param defaultValue The integer default
-     * @return A JsonKey interface object
-     */
-    protected fun getJsonKeyWithIntValue(key: String, defaultValue: Int = -1): JsonKey {
-        return getJsonKeyFromKeyAndValue(key, defaultValue)
-    }
-
-    /**
-     * Gets the [JsonKey] interface object with [Any] value.
-     *
-     * @param key The [String] key value
-     * @param value The [Any] value
-     * @return A JsonKey interface object
-     */
-    private fun getJsonKeyFromKeyAndValue(key: String, value: Any): JsonKey {
-        return object : JsonKey {
-            override fun getValue(): Any {
-                return value
-            }
-
-            override fun getKey(): String {
-                return key
-            }
-
-        }
-    }
-
-    protected fun <E> getObjectFromByteStream(byteStream: InputStream, klass: Class<E>) : E {
+    private fun <E> getObjectFromByteStream(byteStream: InputStream, klass: Class<E>): E {
         val jsonString = getStringFromByteStream(byteStream)
         return Gson().fromJson(jsonString, klass)
     }
