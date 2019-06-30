@@ -7,7 +7,7 @@ import org.junit.Test
 
 class MultiplayerMapProcessingTest: BaseProcessingTest() {
 
-    lateinit var maps : List<MultiplayerMap>
+    lateinit var maps : Array<MultiplayerMap>
 
     @Before
     fun `Parse Multiplayer Response`() {

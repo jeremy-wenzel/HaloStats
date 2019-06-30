@@ -5,11 +5,15 @@ import com.github.cliftonlabs.json_simple.JsonObject
 import net.jeremywenzel.halostats.core.haloapi.MultiplayerMap
 import java.io.InputStream
 
-class MultiplayerMapsResponseParser: BaseResponseParser<List<MultiplayerMap>>() {
-    override fun parseResponse(byteStream: InputStream): List<MultiplayerMap> {
-        val jsonArray = getJsonArrayFromInputStream(byteStream)
-        return getMultiplayerMapsFromJsonArray(jsonArray)
+class MultiplayerMapsResponseParser: BaseResponseParser<Array<MultiplayerMap>>() {
+    override fun getClassType(): Class<Array<MultiplayerMap>> {
+        return Array<MultiplayerMap>::class.java
     }
+
+//    override fun parseResponse(byteStream: InputStream): Array<MultiplayerMap> {
+//        val jsonArray = getJsonArrayFromInputStream(byteStream)
+//        return getMultiplayerMapsFromJsonArray(jsonArray)
+//    }
 
     private fun getMultiplayerMapsFromJsonArray(jsonArray: JsonArray): List<MultiplayerMap> {
         val multiplayerMaps: ArrayList<MultiplayerMap> = ArrayList()

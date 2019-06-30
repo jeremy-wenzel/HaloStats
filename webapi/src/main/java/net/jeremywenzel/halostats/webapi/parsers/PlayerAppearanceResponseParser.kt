@@ -6,14 +6,17 @@ import net.jeremywenzel.halostats.core.haloapi.PlayerAppearance
 import java.io.InputStream
 
 class PlayerAppearanceResponseParser : BaseResponseParser<PlayerAppearance>() {
-    override fun parseResponse(byteStream: InputStream): PlayerAppearance =
-            getPlayerAppearanceFromResponseObject(getJsonObjectFromInputStream(byteStream))
-
-    private fun getPlayerAppearanceFromResponseObject(responseObject: JsonObject) : PlayerAppearance {
-        val gamerTagString = responseObject.getString(getJsonKeyWithStringValue("Gamertag"))
-        val serviceTag = responseObject.getString(getJsonKeyWithStringValue("ServiceTag"))
-        val companyJsonObject = responseObject["Company"] as JsonObject
-        val companyName = companyJsonObject.getString(getJsonKeyWithStringValue("Name"))
-        return PlayerAppearance(GamerTag(gamerTagString), serviceTag, companyName)
+    override fun getClassType(): Class<PlayerAppearance> {
+        return PlayerAppearance::class.java
     }
+//    override fun parseResponse(byteStream: InputStream): PlayerAppearance =
+//            getPlayerAppearanceFromResponseObject(getJsonObjectFromInputStream(byteStream))
+
+//    private fun getPlayerAppearanceFromResponseObject(responseObject: JsonObject) : PlayerAppearance {
+//        val gamerTagString = responseObject.getString(getJsonKeyWithStringValue("Gamertag"))
+//        val serviceTag = responseObject.getString(getJsonKeyWithStringValue("ServiceTag"))
+//        val companyJsonObject = responseObject["Company"] as JsonObject
+//        val company = companyJsonObject.getString(getJsonKeyWithStringValue("Name"))
+//        return PlayerAppearance(GamerTag(gamerTagString), serviceTag, company)
+//    }
 }

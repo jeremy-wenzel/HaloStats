@@ -27,6 +27,6 @@ class PlayerAppearanceResponseProcessingTest: BaseProcessingTest() {
 
     @Test
     fun `Verify Company Name`() {
-        assertEquals("The Queens Weebs", playerAppearance.companyName)
+        assertEquals("The Queens Weebs", playerAppearance.company.name)
     }
 }

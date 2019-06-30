@@ -1,7 +1,6 @@
-package net.jeremywenzel.halostats.webapi.parsers
+package net.jeremywenzel.halostats.webapi.requests
 
-import net.jeremywenzel.halostats.webapi.requests.BaseHaloMetadataRequest
-import net.jeremywenzel.halostats.webapi.requests.MedalsResponseParser
+import net.jeremywenzel.halostats.webapi.parsers.MedalsResponseParser
 
 class MedalsRequest() : BaseHaloMetadataRequest<MedalsResponseParser>() {
     override fun getResponseParser(): MedalsResponseParser {

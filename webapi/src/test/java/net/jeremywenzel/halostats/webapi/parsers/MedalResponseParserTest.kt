@@ -1,7 +1,6 @@
 package net.jeremywenzel.halostats.webapi.parsers
 
 import net.jeremywenzel.halostats.core.haloapi.Medal
-import net.jeremywenzel.halostats.webapi.requests.MedalsResponseParser
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Before
@@ -9,7 +8,7 @@ import org.junit.Test
 
 class MedalResponseParserTest: BaseProcessingTest() {
 
-    lateinit var medals: List<Medal>
+    lateinit var medals: Array<Medal>
 
     @Before
     fun `Get Medals from Response`() {

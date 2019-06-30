@@ -1,3 +1,7 @@
 package net.jeremywenzel.halostats.core.haloapi
 
-data class MultiplayerMap(val name: String?, val description: String?, val imageUrl: String)
+import com.google.gson.annotations.SerializedName
+
+data class MultiplayerMap(@SerializedName("name")val name: String?,
+                          @SerializedName("description")val description: String?,
+                          @SerializedName("imageUrl")       val imageUrl: String)

@@ -4,6 +4,7 @@ import com.github.cliftonlabs.json_simple.JsonArray
 import com.github.cliftonlabs.json_simple.JsonKey
 import com.github.cliftonlabs.json_simple.JsonObject
 import com.github.cliftonlabs.json_simple.Jsoner
+import com.google.gson.Gson
 import net.jeremywenzel.halostats.core.util.Logger
 import java.io.IOException
 import java.io.InputStream
@@ -23,7 +24,11 @@ abstract class BaseResponseParser<T> {
      * @param byteStream The [InputStream] byte stream from the [okhttp3.ResponseBody]
      * @return The desired object that should be in the response
      */
-    abstract fun parseResponse(byteStream: InputStream): T
+     open fun parseResponse(byteStream: InputStream): T {
+        return getObjectFromByteStream(byteStream, getClassType())
+    }
+
+    abstract fun getClassType(): Class<T>
 
     /**
      * Gets a [JsonArray] from the [InputStream]. This is typically used when we know the
@@ -111,5 +116,10 @@ abstract class BaseResponseParser<T> {
             }
 
         }
+    }
+
+    protected fun <E> getObjectFromByteStream(byteStream: InputStream, klass: Class<E>) : E {
+        val jsonString = getStringFromByteStream(byteStream)
+        return Gson().fromJson(jsonString, klass)
     }
 }

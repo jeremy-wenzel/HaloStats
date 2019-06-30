@@ -1,6 +1,12 @@
 package net.jeremywenzel.halostats.core.haloapi
 
-class ArenaServiceRecord(val kills: Int, val deaths: Int, val assists: Int, val wins: Int, val loses: Int) {
+import com.google.gson.annotations.SerializedName
+
+class ArenaServiceRecord(@SerializedName("TotalKills")val kills: Int,
+                         @SerializedName("TotalDeaths")val deaths: Int,
+                         @SerializedName("TotalAssists")val assists: Int,
+                         @SerializedName("TotalGamesWon")val wins: Int,
+                         @SerializedName("TotalGamesLost")val loses: Int) {
     // Things we will need
     // Total Kills
     // Total Deaths
