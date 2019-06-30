@@ -55,7 +55,7 @@ abstract class BaseResponseParser<T> {
      * @param byteStream The [InputStream] that is going to be parsed
      * @return A [String] representation of the byte stream
      */
-    private fun getStringFromByteStream(byteStream: InputStream): String {
+    fun getStringFromByteStream(byteStream: InputStream): String {
         val stringBuilder = StringBuilder()
         try {
             var value = byteStream.read()
@@ -63,8 +63,7 @@ abstract class BaseResponseParser<T> {
                 stringBuilder.append(value.toChar())
                 value = byteStream.read()
             }
-        }
-        catch (e: IOException) {
+        } catch (e: IOException) {
             Logger.d("IOException while reading from byte stream")
             throw e
         }
