@@ -1,0 +1,778 @@
+{
+  "Start": 0,
+  "Count": 10,
+  "ResultCount": 10,
+  "Results": [
+    {
+      "Links": {
+        "StatsMatchDetails": {
+          "AuthorityId": "spartanstats",
+          "Path": "h5/arena/matches/3c353256-5c47-47e3-9374-4a93352d3f96",
+          "QueryString": null,
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        },
+        "UgcFilmManifest": {
+          "AuthorityId": "ugc",
+          "Path": "/h5/films/3c353256-5c47-47e3-9374-4a93352d3f96",
+          "QueryString": "?view=film-manifest",
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        }
+      },
+      "Id": {
+        "MatchId": "3c353256-5c47-47e3-9374-4a93352d3f96",
+        "GameMode": 1
+      },
+      "HopperId": "f0c9ef9a-48bd-4b24-9db3-2c76b4e23450",
+      "MapId": "c74c9d0f-f206-11e4-8330-24be05e24f7e",
+      "MapVariant": {
+        "ResourceType": 3,
+        "ResourceId": "e85b420f-bcae-40c3-81b4-48c724399dbd",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "GameBaseVariantId": "257a305e-4dd3-41f1-9824-dfe7e8bd59e1",
+      "GameVariant": {
+        "ResourceType": 2,
+        "ResourceId": "a1c40d5f-d709-4e2b-8486-49f441fb20f8",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "MatchDuration": "PT8M1.2783196S",
+      "MatchCompletedDate": {
+        "ISO8601Date": "2019-06-09T00:00:00Z"
+      },
+      "Teams": [
+        {
+          "Id": 1,
+          "Score": 55,
+          "Rank": 2
+        },
+        {
+          "Id": 0,
+          "Score": 75,
+          "Rank": 1
+        }
+      ],
+      "Players": [
+        {
+          "Player": {
+            "Gamertag": "English Crusade",
+            "Xuid": null
+          },
+          "TeamId": 1,
+          "Rank": 9,
+          "Result": 1,
+          "TotalKills": 8,
+          "TotalDeaths": 20,
+          "TotalAssists": 3,
+          "PreMatchRatings": null,
+          "PostMatchRatings": null
+        }
+      ],
+      "IsTeamGame": true,
+      "SeasonId": "",
+      "MatchCompletedDateFidelity": 1
+    },
+    {
+      "Links": {
+        "StatsMatchDetails": {
+          "AuthorityId": "spartanstats",
+          "Path": "h5/arena/matches/5147219c-bcad-45ef-89c1-a7149d8aa82b",
+          "QueryString": null,
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        },
+        "UgcFilmManifest": {
+          "AuthorityId": "ugc",
+          "Path": "/h5/films/5147219c-bcad-45ef-89c1-a7149d8aa82b",
+          "QueryString": "?view=film-manifest",
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        }
+      },
+      "Id": {
+        "MatchId": "5147219c-bcad-45ef-89c1-a7149d8aa82b",
+        "GameMode": 1
+      },
+      "HopperId": "f0c9ef9a-48bd-4b24-9db3-2c76b4e23450",
+      "MapId": "ce89a40f-f206-11e4-b83f-24be05e24f7e",
+      "MapVariant": {
+        "ResourceType": 3,
+        "ResourceId": "958ec4f7-1b9e-4839-bf61-ecc198454bc8",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "GameBaseVariantId": "257a305e-4dd3-41f1-9824-dfe7e8bd59e1",
+      "GameVariant": {
+        "ResourceType": 2,
+        "ResourceId": "7ec9718f-72dc-490d-93be-22b5685cedb6",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "MatchDuration": "PT8M43.5644511S",
+      "MatchCompletedDate": {
+        "ISO8601Date": "2019-06-09T00:00:00Z"
+      },
+      "Teams": [
+        {
+          "Id": 1,
+          "Score": 75,
+          "Rank": 1
+        },
+        {
+          "Id": 0,
+          "Score": 68,
+          "Rank": 2
+        }
+      ],
+      "Players": [
+        {
+          "Player": {
+            "Gamertag": "English Crusade",
+            "Xuid": null
+          },
+          "TeamId": 1,
+          "Rank": 2,
+          "Result": 3,
+          "TotalKills": 17,
+          "TotalDeaths": 14,
+          "TotalAssists": 7,
+          "PreMatchRatings": null,
+          "PostMatchRatings": null
+        }
+      ],
+      "IsTeamGame": true,
+      "SeasonId": "",
+      "MatchCompletedDateFidelity": 1
+    },
+    {
+      "Links": {
+        "StatsMatchDetails": {
+          "AuthorityId": "spartanstats",
+          "Path": "h5/arena/matches/99085b6f-a106-4d6a-a0db-97709d1032a1",
+          "QueryString": null,
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        },
+        "UgcFilmManifest": {
+          "AuthorityId": "ugc",
+          "Path": "/h5/films/99085b6f-a106-4d6a-a0db-97709d1032a1",
+          "QueryString": "?view=film-manifest",
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        }
+      },
+      "Id": {
+        "MatchId": "99085b6f-a106-4d6a-a0db-97709d1032a1",
+        "GameMode": 1
+      },
+      "HopperId": "35e7b78f-5fc8-4e49-920c-c1b0fa323a36",
+      "MapId": "d67fdcb9-6d9c-403e-960d-04202e19b244",
+      "MapVariant": {
+        "ResourceType": 3,
+        "ResourceId": "9db0175e-8308-4fb9-9c3d-fb9e2b6e8e76",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "GameBaseVariantId": "257a305e-4dd3-41f1-9824-dfe7e8bd59e1",
+      "GameVariant": {
+        "ResourceType": 2,
+        "ResourceId": "90becac6-ef78-45c2-a1ad-84cab57ed92b",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "MatchDuration": "PT9M53.3099892S",
+      "MatchCompletedDate": {
+        "ISO8601Date": "2019-05-26T00:00:00Z"
+      },
+      "Teams": [
+        {
+          "Id": 1,
+          "Score": 100,
+          "Rank": 1
+        },
+        {
+          "Id": 0,
+          "Score": 81,
+          "Rank": 2
+        }
+      ],
+      "Players": [
+        {
+          "Player": {
+            "Gamertag": "English Crusade",
+            "Xuid": null
+          },
+          "TeamId": 0,
+          "Rank": 9,
+          "Result": 1,
+          "TotalKills": 15,
+          "TotalDeaths": 13,
+          "TotalAssists": 11,
+          "PreMatchRatings": null,
+          "PostMatchRatings": null
+        }
+      ],
+      "IsTeamGame": true,
+      "SeasonId": "",
+      "MatchCompletedDateFidelity": 1
+    },
+    {
+      "Links": {
+        "StatsMatchDetails": {
+          "AuthorityId": "spartanstats",
+          "Path": "h5/arena/matches/446f400f-e760-43f0-898c-953c0d598463",
+          "QueryString": null,
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        },
+        "UgcFilmManifest": {
+          "AuthorityId": "ugc",
+          "Path": "/h5/films/446f400f-e760-43f0-898c-953c0d598463",
+          "QueryString": "?view=film-manifest",
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        }
+      },
+      "Id": {
+        "MatchId": "446f400f-e760-43f0-898c-953c0d598463",
+        "GameMode": 1
+      },
+      "HopperId": "35e7b78f-5fc8-4e49-920c-c1b0fa323a36",
+      "MapId": "c7805740-f206-11e4-982c-24be05e24f7e",
+      "MapVariant": {
+        "ResourceType": 3,
+        "ResourceId": "da45aac3-3835-4ebe-86d5-6c8f583ea052",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "GameBaseVariantId": "257a305e-4dd3-41f1-9824-dfe7e8bd59e1",
+      "GameVariant": {
+        "ResourceType": 2,
+        "ResourceId": "4af06935-7379-4b0a-858e-b80d4039b265",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "MatchDuration": "PT7M34.7444881S",
+      "MatchCompletedDate": {
+        "ISO8601Date": "2019-05-26T00:00:00Z"
+      },
+      "Teams": [
+        {
+          "Id": 1,
+          "Score": 74,
+          "Rank": 2
+        },
+        {
+          "Id": 0,
+          "Score": 100,
+          "Rank": 1
+        }
+      ],
+      "Players": [
+        {
+          "Player": {
+            "Gamertag": "English Crusade",
+            "Xuid": null
+          },
+          "TeamId": 1,
+          "Rank": 16,
+          "Result": 1,
+          "TotalKills": 8,
+          "TotalDeaths": 13,
+          "TotalAssists": 4,
+          "PreMatchRatings": null,
+          "PostMatchRatings": null
+        }
+      ],
+      "IsTeamGame": true,
+      "SeasonId": "",
+      "MatchCompletedDateFidelity": 1
+    },
+    {
+      "Links": {
+        "StatsMatchDetails": {
+          "AuthorityId": "spartanstats",
+          "Path": "h5/arena/matches/42d3aa13-33a3-420c-bbc0-e8840d68d878",
+          "QueryString": null,
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        },
+        "UgcFilmManifest": {
+          "AuthorityId": "ugc",
+          "Path": "/h5/films/42d3aa13-33a3-420c-bbc0-e8840d68d878",
+          "QueryString": "?view=film-manifest",
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        }
+      },
+      "Id": {
+        "MatchId": "42d3aa13-33a3-420c-bbc0-e8840d68d878",
+        "GameMode": 1
+      },
+      "HopperId": "35e7b78f-5fc8-4e49-920c-c1b0fa323a36",
+      "MapId": "c74c9d0f-f206-11e4-8330-24be05e24f7e",
+      "MapVariant": {
+        "ResourceType": 3,
+        "ResourceId": "25f8c226-bfa1-4e61-aa4c-d95bc8d4fa4d",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "GameBaseVariantId": "257a305e-4dd3-41f1-9824-dfe7e8bd59e1",
+      "GameVariant": {
+        "ResourceType": 2,
+        "ResourceId": "2da13d0e-6ec4-4747-8fdd-700835b69905",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "MatchDuration": "PT8M19.7036705S",
+      "MatchCompletedDate": {
+        "ISO8601Date": "2019-05-24T00:00:00Z"
+      },
+      "Teams": [
+        {
+          "Id": 0,
+          "Score": 100,
+          "Rank": 1
+        },
+        {
+          "Id": 1,
+          "Score": 56,
+          "Rank": 2
+        }
+      ],
+      "Players": [
+        {
+          "Player": {
+            "Gamertag": "English Crusade",
+            "Xuid": null
+          },
+          "TeamId": 1,
+          "Rank": 11,
+          "Result": 1,
+          "TotalKills": 9,
+          "TotalDeaths": 12,
+          "TotalAssists": 1,
+          "PreMatchRatings": null,
+          "PostMatchRatings": null
+        }
+      ],
+      "IsTeamGame": true,
+      "SeasonId": "",
+      "MatchCompletedDateFidelity": 1
+    },
+    {
+      "Links": {
+        "StatsMatchDetails": {
+          "AuthorityId": "spartanstats",
+          "Path": "h5/arena/matches/ad54c2df-08ba-449b-9177-89e57a3d3ec7",
+          "QueryString": null,
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        },
+        "UgcFilmManifest": {
+          "AuthorityId": "ugc",
+          "Path": "/h5/films/ad54c2df-08ba-449b-9177-89e57a3d3ec7",
+          "QueryString": "?view=film-manifest",
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        }
+      },
+      "Id": {
+        "MatchId": "ad54c2df-08ba-449b-9177-89e57a3d3ec7",
+        "GameMode": 1
+      },
+      "HopperId": "35e7b78f-5fc8-4e49-920c-c1b0fa323a36",
+      "MapId": "c74c9d0f-f206-11e4-8330-24be05e24f7e",
+      "MapVariant": {
+        "ResourceType": 3,
+        "ResourceId": "521e0e5f-dd4f-4c9e-a4d9-175923a2a944",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "GameBaseVariantId": "257a305e-4dd3-41f1-9824-dfe7e8bd59e1",
+      "GameVariant": {
+        "ResourceType": 2,
+        "ResourceId": "2d3f46e9-5bf3-4830-8c08-5ac5858cc804",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "MatchDuration": "PT9M22.1951328S",
+      "MatchCompletedDate": {
+        "ISO8601Date": "2019-05-24T00:00:00Z"
+      },
+      "Teams": [
+        {
+          "Id": 0,
+          "Score": 100,
+          "Rank": 1
+        },
+        {
+          "Id": 1,
+          "Score": 81,
+          "Rank": 2
+        }
+      ],
+      "Players": [
+        {
+          "Player": {
+            "Gamertag": "English Crusade",
+            "Xuid": null
+          },
+          "TeamId": 1,
+          "Rank": 11,
+          "Result": 1,
+          "TotalKills": 14,
+          "TotalDeaths": 11,
+          "TotalAssists": 4,
+          "PreMatchRatings": null,
+          "PostMatchRatings": null
+        }
+      ],
+      "IsTeamGame": true,
+      "SeasonId": "",
+      "MatchCompletedDateFidelity": 1
+    },
+    {
+      "Links": {
+        "StatsMatchDetails": {
+          "AuthorityId": "spartanstats",
+          "Path": "h5/arena/matches/d2f9c4f2-279d-436c-9af5-12f7d06c5c1a",
+          "QueryString": null,
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        },
+        "UgcFilmManifest": {
+          "AuthorityId": "ugc",
+          "Path": "/h5/films/d2f9c4f2-279d-436c-9af5-12f7d06c5c1a",
+          "QueryString": "?view=film-manifest",
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        }
+      },
+      "Id": {
+        "MatchId": "d2f9c4f2-279d-436c-9af5-12f7d06c5c1a",
+        "GameMode": 1
+      },
+      "HopperId": "35e7b78f-5fc8-4e49-920c-c1b0fa323a36",
+      "MapId": "d67fdcb9-6d9c-403e-960d-04202e19b244",
+      "MapVariant": {
+        "ResourceType": 3,
+        "ResourceId": "06b4ddf3-e0cb-4bff-85a0-28a366c8b603",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "GameBaseVariantId": "257a305e-4dd3-41f1-9824-dfe7e8bd59e1",
+      "GameVariant": {
+        "ResourceType": 2,
+        "ResourceId": "77305d71-8946-4c10-9ba8-7818b080f77e",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "MatchDuration": "PT9M47.3005899S",
+      "MatchCompletedDate": {
+        "ISO8601Date": "2019-05-24T00:00:00Z"
+      },
+      "Teams": [
+        {
+          "Id": 1,
+          "Score": 84,
+          "Rank": 2
+        },
+        {
+          "Id": 0,
+          "Score": 100,
+          "Rank": 1
+        }
+      ],
+      "Players": [
+        {
+          "Player": {
+            "Gamertag": "English Crusade",
+            "Xuid": null
+          },
+          "TeamId": 0,
+          "Rank": 8,
+          "Result": 3,
+          "TotalKills": 2,
+          "TotalDeaths": 2,
+          "TotalAssists": 0,
+          "PreMatchRatings": null,
+          "PostMatchRatings": null
+        }
+      ],
+      "IsTeamGame": true,
+      "SeasonId": "",
+      "MatchCompletedDateFidelity": 1
+    },
+    {
+      "Links": {
+        "StatsMatchDetails": {
+          "AuthorityId": "spartanstats",
+          "Path": "h5/arena/matches/d83f78b8-5e98-4802-9f63-7ddc8913d626",
+          "QueryString": null,
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        },
+        "UgcFilmManifest": {
+          "AuthorityId": "ugc",
+          "Path": "/h5/films/d83f78b8-5e98-4802-9f63-7ddc8913d626",
+          "QueryString": "?view=film-manifest",
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        }
+      },
+      "Id": {
+        "MatchId": "d83f78b8-5e98-4802-9f63-7ddc8913d626",
+        "GameMode": 1
+      },
+      "HopperId": "35e7b78f-5fc8-4e49-920c-c1b0fa323a36",
+      "MapId": "c7b7baf0-f206-11e4-ae9a-24be05e24f7e",
+      "MapVariant": {
+        "ResourceType": 3,
+        "ResourceId": "ae40f02a-bb61-42c9-a378-4600490fef72",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "GameBaseVariantId": "257a305e-4dd3-41f1-9824-dfe7e8bd59e1",
+      "GameVariant": {
+        "ResourceType": 2,
+        "ResourceId": "9969878c-589e-4ab2-91ed-43e0cbfbed34",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "MatchDuration": "PT9M12.4736572S",
+      "MatchCompletedDate": {
+        "ISO8601Date": "2019-05-24T00:00:00Z"
+      },
+      "Teams": [
+        {
+          "Id": 0,
+          "Score": 93,
+          "Rank": 2
+        },
+        {
+          "Id": 1,
+          "Score": 100,
+          "Rank": 1
+        }
+      ],
+      "Players": [
+        {
+          "Player": {
+            "Gamertag": "English Crusade",
+            "Xuid": null
+          },
+          "TeamId": 0,
+          "Rank": 11,
+          "Result": 1,
+          "TotalKills": 15,
+          "TotalDeaths": 10,
+          "TotalAssists": 3,
+          "PreMatchRatings": null,
+          "PostMatchRatings": null
+        }
+      ],
+      "IsTeamGame": true,
+      "SeasonId": "",
+      "MatchCompletedDateFidelity": 1
+    },
+    {
+      "Links": {
+        "StatsMatchDetails": {
+          "AuthorityId": "spartanstats",
+          "Path": "h5/arena/matches/dc9a0d1d-32d4-4e8d-adff-4608ddf724f3",
+          "QueryString": null,
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        },
+        "UgcFilmManifest": {
+          "AuthorityId": "ugc",
+          "Path": "/h5/films/dc9a0d1d-32d4-4e8d-adff-4608ddf724f3",
+          "QueryString": "?view=film-manifest",
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        }
+      },
+      "Id": {
+        "MatchId": "dc9a0d1d-32d4-4e8d-adff-4608ddf724f3",
+        "GameMode": 1
+      },
+      "HopperId": "35e7b78f-5fc8-4e49-920c-c1b0fa323a36",
+      "MapId": "d67fdcb9-6d9c-403e-960d-04202e19b244",
+      "MapVariant": {
+        "ResourceType": 3,
+        "ResourceId": "b4a01f04-afcb-4ed3-b8c3-e1f0fb1dcc97",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "GameBaseVariantId": "257a305e-4dd3-41f1-9824-dfe7e8bd59e1",
+      "GameVariant": {
+        "ResourceType": 2,
+        "ResourceId": "2a878725-5f6f-42d5-9f32-ff2fa557cabb",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "MatchDuration": "PT9M52.5894166S",
+      "MatchCompletedDate": {
+        "ISO8601Date": "2019-04-28T00:00:00Z"
+      },
+      "Teams": [
+        {
+          "Id": 1,
+          "Score": 100,
+          "Rank": 1
+        },
+        {
+          "Id": 0,
+          "Score": 82,
+          "Rank": 2
+        }
+      ],
+      "Players": [
+        {
+          "Player": {
+            "Gamertag": "English Crusade",
+            "Xuid": null
+          },
+          "TeamId": 1,
+          "Rank": 4,
+          "Result": 3,
+          "TotalKills": 11,
+          "TotalDeaths": 12,
+          "TotalAssists": 5,
+          "PreMatchRatings": null,
+          "PostMatchRatings": null
+        }
+      ],
+      "IsTeamGame": true,
+      "SeasonId": "",
+      "MatchCompletedDateFidelity": 1
+    },
+    {
+      "Links": {
+        "StatsMatchDetails": {
+          "AuthorityId": "spartanstats",
+          "Path": "h5/arena/matches/2503efdf-bc85-4ff0-94b1-0b7aa80dbfb8",
+          "QueryString": null,
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        },
+        "UgcFilmManifest": {
+          "AuthorityId": "ugc",
+          "Path": "/h5/films/2503efdf-bc85-4ff0-94b1-0b7aa80dbfb8",
+          "QueryString": "?view=film-manifest",
+          "RetryPolicyId": "exponentialretry",
+          "TopicName": "",
+          "AcknowledgementTypeId": 0,
+          "AuthenticationLifetimeExtensionSupported": false
+        }
+      },
+      "Id": {
+        "MatchId": "2503efdf-bc85-4ff0-94b1-0b7aa80dbfb8",
+        "GameMode": 1
+      },
+      "HopperId": "35e7b78f-5fc8-4e49-920c-c1b0fa323a36",
+      "MapId": "c7b7baf0-f206-11e4-ae9a-24be05e24f7e",
+      "MapVariant": {
+        "ResourceType": 3,
+        "ResourceId": "73ccf850-0c76-4429-be66-7fb4cdc2cb21",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "GameBaseVariantId": "257a305e-4dd3-41f1-9824-dfe7e8bd59e1",
+      "GameVariant": {
+        "ResourceType": 2,
+        "ResourceId": "637d562b-002e-47ce-9a8a-9eddcbe95756",
+        "OwnerType": 3,
+        "Owner": ""
+      },
+      "MatchDuration": "PT12M49.9701548S",
+      "MatchCompletedDate": {
+        "ISO8601Date": "2019-04-28T00:00:00Z"
+      },
+      "Teams": [
+        {
+          "Id": 1,
+          "Score": 100,
+          "Rank": 1
+        },
+        {
+          "Id": 0,
+          "Score": 98,
+          "Rank": 2
+        }
+      ],
+      "Players": [
+        {
+          "Player": {
+            "Gamertag": "English Crusade",
+            "Xuid": null
+          },
+          "TeamId": 1,
+          "Rank": 4,
+          "Result": 3,
+          "TotalKills": 13,
+          "TotalDeaths": 11,
+          "TotalAssists": 4,
+          "PreMatchRatings": null,
+          "PostMatchRatings": null
+        }
+      ],
+      "IsTeamGame": true,
+      "SeasonId": "",
+      "MatchCompletedDateFidelity": 1
+    }
+  ],
+  "Links": {
+    "Self": {
+      "AuthorityId": "spartanstats",
+      "Path": "/h5/players/English%20Crusade/matches",
+      "QueryString": "?include-xuids=false&view=full&include-ratings=false&count=10",
+      "RetryPolicyId": "",
+      "TopicName": "",
+      "AcknowledgementTypeId": 0,
+      "AuthenticationLifetimeExtensionSupported": false
+    }
+  }
+}
