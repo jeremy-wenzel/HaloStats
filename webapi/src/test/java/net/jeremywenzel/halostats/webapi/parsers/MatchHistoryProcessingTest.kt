@@ -5,7 +5,7 @@ import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 
-class MatchiHistoryProcessingTest: BaseProcessingTest() {
+class MatchHistoryProcessingTest: BaseProcessingTest() {
 
     lateinit var historyItems: Array<MatchHistoryItem>
 
