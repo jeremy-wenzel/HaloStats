@@ -1,4 +1,4 @@
-package net.jeremywenzel.halostats.features
+package net.jeremywenzel.halostats.core.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -13,7 +13,7 @@ abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fra
         mPresenter = createPresenter()
     }
 
-    internal abstract fun createPresenter(): P
+    protected abstract fun createPresenter(): P
 
     override fun onStart() {
         super.onStart()

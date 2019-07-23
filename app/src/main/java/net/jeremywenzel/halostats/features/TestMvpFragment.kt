@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import net.jeremywenzel.halostats.webapi.requests.EnemiesRequest
 import net.jeremywenzel.halostats.R
+import net.jeremywenzel.halostats.core.fragment.BaseMvpFragment
 import net.jeremywenzel.halostats.webapi.RequestProcessor
 
 class TestMvpFragment: BaseMvpFragment<TestView, TestPresenter>(), TestView {
