@@ -11,6 +11,8 @@ class DashboardFragment: BaseMvpFragment<DashboardView, DashboardPresenter>(), D
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.dashboard_fragment, container, false)
+        requireFragmentManager().beginTransaction().add(R.id.card_layout, ArenaCardFragment()).commit()
+        requireFragmentManager().beginTransaction().add(R.id.card_layout, ArenaCardFragment()).commit()
         return view
     }
 }

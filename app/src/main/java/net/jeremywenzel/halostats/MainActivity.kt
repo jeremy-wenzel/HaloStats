@@ -2,7 +2,6 @@ package net.jeremywenzel.halostats
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import net.jeremywenzel.halostats.features.TestMvpFragment
 import net.jwenzel.dashboard.DashboardFragment
 
 class MainActivity : AppCompatActivity() {
