@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import net.jwenzel.coremvp.fragment.BaseMvpFragment
 
 class DashboardFragment: BaseMvpFragment<DashboardView, DashboardPresenter>(), DashboardView {
-    override fun createPresenter(): DashboardPresenter = DashboardPresenterImpl()
+    override fun createPresenter(): DashboardPresenter = DashboardPresenterImpl(this)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.dashboard_fragment, container, false)

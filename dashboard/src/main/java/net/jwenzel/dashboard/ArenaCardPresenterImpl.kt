@@ -1,6 +1,5 @@
 package net.jwenzel.dashboard
 
-import android.util.Log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -10,7 +9,7 @@ import net.jeremywenzel.halostats.core.haloapi.ArenaServiceRecord
 import net.jeremywenzel.halostats.core.haloapi.GamerTag
 import net.jeremywenzel.halostats.webapi.requests.ArenaServiceRecordRequest
 
-class ArenaCardPresenterImpl: BasePresenterImpl<ArenaCardView>(), ArenaCardPresenter {
+class ArenaCardPresenterImpl(view: ArenaCardView): BasePresenterImpl<ArenaCardView>(view), ArenaCardPresenter {
 
     private val job = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + job)
@@ -25,7 +24,11 @@ class ArenaCardPresenterImpl: BasePresenterImpl<ArenaCardView>(), ArenaCardPrese
         }
     }
 
-    fun onSucceed(result: Array<ArenaServiceRecord>) {
-        Log.d("Tag", result[0].toString())
+    private fun onSucceed(result: Array<ArenaServiceRecord>) {
+        if (isViewNull()) {
+            return
+        }
+
+        view!!.showServiceRecord(result[0])
     }
 }

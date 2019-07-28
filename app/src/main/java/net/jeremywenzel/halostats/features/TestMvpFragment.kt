@@ -10,7 +10,7 @@ import net.jwenzel.coremvp.fragment.BaseMvpFragment
 
 class TestMvpFragment: BaseMvpFragment<TestView, TestPresenter>(), TestView {
     override fun createPresenter(): TestPresenter {
-        return TestPresenterImpl()
+        return TestPresenterImpl(this)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

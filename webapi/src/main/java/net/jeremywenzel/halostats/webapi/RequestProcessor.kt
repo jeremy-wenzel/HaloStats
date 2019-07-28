@@ -33,8 +33,4 @@ object RequestProcessor {
             ResponseObject(value, wasException)
         }
     }
-
-    suspend fun test() {
-
-    }
 }

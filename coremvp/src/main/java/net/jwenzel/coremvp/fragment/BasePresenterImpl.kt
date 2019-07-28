@@ -5,12 +5,7 @@ import net.jeremywenzel.halostats.webapi.RequestProcessor
 import net.jeremywenzel.halostats.webapi.parsers.BaseResponseParser
 import net.jeremywenzel.halostats.webapi.requests.BaseHaloRequest
 
-abstract class BasePresenterImpl<V: BaseView> : BasePresenter<V> {
-    protected var mView: V? = null
-
-    override fun attachView(view: V) {
-        mView = view
-    }
+abstract class BasePresenterImpl<V: BaseView>(protected var view: V?) : BasePresenter<V> {
 
     override fun onStart() {
 
@@ -33,11 +28,11 @@ abstract class BasePresenterImpl<V: BaseView> : BasePresenter<V> {
     }
 
     override fun onDestroyView() {
-        mView = null
+        view = null
     }
 
     protected fun isViewNull(): Boolean {
-        return mView == null
+        return view == null
     }
 
     protected suspend fun <T: BaseResponseParser<*>, E> sendRequest(request: BaseHaloRequest<T>, succeedAction: (result: E) -> Unit) {
