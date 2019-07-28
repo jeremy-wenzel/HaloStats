@@ -1,6 +1,6 @@
 package net.jeremywenzel.halostats.webapi
 
-import android.support.annotation.WorkerThread
+import kotlinx.coroutines.*
 import net.jeremywenzel.halostats.core.util.Logger
 import net.jeremywenzel.halostats.webapi.parsers.BaseResponseParser
 import net.jeremywenzel.halostats.webapi.requests.BaseHaloRequest
@@ -12,13 +12,28 @@ object RequestProcessor {
 
     var mClient = OkHttpClient()
 
-    @WorkerThread
-    fun <T : BaseResponseParser<*>>makeRequest(request: BaseHaloRequest<T>) {
-        try {
-            val response: Response = mClient.newCall(request.getOkHttpRequest()).execute()
-            Logger.d(response.toString())
-        } catch (e: Exception) {
-            Logger.d("exception", e)
+    suspend fun <T : BaseResponseParser<*>> makeRequest(request: BaseHaloRequest<T>): Any? {
+
+        return withContext(Dispatchers.IO) {
+            var v : Any? = null
+
+            try {
+                val response: Response = mClient.newCall(request.getOkHttpRequest()).execute()
+                Logger.d(response.toString())
+                val parser = request.getResponseParser()
+                val responseBody = response.body()
+                if (responseBody != null) {
+                    v = parser.parseResponse(responseBody.byteStream())
+                }
+            } catch (e: Exception) {
+                Logger.d("exception", e)
+            }
+
+            v
         }
+    }
+
+    suspend fun test() {
+
     }
 }

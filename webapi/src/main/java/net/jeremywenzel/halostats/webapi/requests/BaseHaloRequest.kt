@@ -38,5 +38,5 @@ abstract class BaseHaloRequest<T> {
     /**
      *
      */
-    protected abstract fun getResponseParser(): T
+    abstract fun getResponseParser(): T
 }

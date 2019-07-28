@@ -14,4 +14,8 @@ class ArenaServiceRecord(@SerializedName("TotalKills")val kills: Int,
     // Total Wins
     // Total Loses
     // Kill death ratio?
+
+    override fun toString(): String {
+        return "$kills $deaths $assists $wins $loses"
+    }
 }
