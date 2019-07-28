@@ -5,10 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import net.jeremywenzel.halostats.webapi.requests.EnemiesRequest
 import net.jeremywenzel.halostats.R
-import net.jeremywenzel.halostats.core.fragment.BaseMvpFragment
-import net.jeremywenzel.halostats.webapi.RequestProcessor
+import net.jwenzel.coremvp.fragment.BaseMvpFragment
 
 class TestMvpFragment: BaseMvpFragment<TestView, TestPresenter>(), TestView {
     override fun createPresenter(): TestPresenter {

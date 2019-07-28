@@ -1,6 +1,6 @@
 package net.jeremywenzel.halostats.features
 
-import net.jeremywenzel.halostats.core.fragment.BasePresenter
+import net.jwenzel.coremvp.fragment.BasePresenter
 
 interface TestPresenter: BasePresenter<TestView> {
 }

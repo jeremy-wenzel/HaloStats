@@ -1,4 +1,4 @@
-package net.jeremywenzel.halostats.core.fragment
+package net.jwenzel.coremvp.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

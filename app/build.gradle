@@ -40,5 +40,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':core')
     implementation project(':webapi')
-    implementation project(path: ':dashboard')
+    implementation project(':dashboard')
+    implementation project(':coremvp')
 }

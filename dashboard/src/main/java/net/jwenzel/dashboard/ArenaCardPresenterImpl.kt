@@ -5,10 +5,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import net.jeremywenzel.halostats.core.fragment.BasePresenterImpl
+import net.jwenzel.coremvp.fragment.BasePresenterImpl
 import net.jeremywenzel.halostats.core.haloapi.ArenaServiceRecord
 import net.jeremywenzel.halostats.core.haloapi.GamerTag
-import net.jeremywenzel.halostats.webapi.RequestProcessor
 import net.jeremywenzel.halostats.webapi.requests.ArenaServiceRecordRequest
 
 class ArenaCardPresenterImpl: BasePresenterImpl<ArenaCardView>(), ArenaCardPresenter {
@@ -21,8 +20,12 @@ class ArenaCardPresenterImpl: BasePresenterImpl<ArenaCardView>(), ArenaCardPrese
         uiScope.launch {
             val list = ArrayList<GamerTag>()
             list.add(GamerTag("English Crusade"))
-            val response = RequestProcessor.makeRequest(ArenaServiceRecordRequest(list)) as Array<ArenaServiceRecord>
-            Log.d("Tag", response[0].toString())
+            sendRequest(ArenaServiceRecordRequest(list), ::onSucceed)
+
         }
+    }
+
+    fun onSucceed(result: Array<ArenaServiceRecord>) {
+        Log.d("Tag", result[0].toString())
     }
 }

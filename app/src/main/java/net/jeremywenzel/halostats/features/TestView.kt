@@ -1,6 +1,6 @@
 package net.jeremywenzel.halostats.features
 
-import net.jeremywenzel.halostats.core.fragment.BaseView
+import net.jwenzel.coremvp.fragment.BaseView
 
 interface TestView: BaseView {
 }

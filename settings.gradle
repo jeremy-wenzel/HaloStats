@@ -1,1 +1,1 @@
-include ':app', ':core', ':webapi', ':dashboard'
+include ':app', ':core', ':webapi', ':dashboard', ':coremvp'

@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import net.jeremywenzel.halostats.core.fragment.BaseMvpFragment
+import net.jwenzel.coremvp.fragment.BaseMvpFragment
 
 class DashboardFragment: BaseMvpFragment<DashboardView, DashboardPresenter>(), DashboardView {
     override fun createPresenter(): DashboardPresenter = DashboardPresenterImpl()

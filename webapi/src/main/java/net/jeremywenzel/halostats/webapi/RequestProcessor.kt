@@ -12,24 +12,25 @@ object RequestProcessor {
 
     var mClient = OkHttpClient()
 
-    suspend fun <T : BaseResponseParser<*>> makeRequest(request: BaseHaloRequest<T>): Any? {
+    suspend fun <T : BaseResponseParser<*>, E> makeRequest(request: BaseHaloRequest<T>): ResponseObject<E> {
 
         return withContext(Dispatchers.IO) {
-            var v : Any? = null
-
+            var value : E? = null
+            var wasException= false
             try {
                 val response: Response = mClient.newCall(request.getOkHttpRequest()).execute()
                 Logger.d(response.toString())
                 val parser = request.getResponseParser()
                 val responseBody = response.body()
                 if (responseBody != null) {
-                    v = parser.parseResponse(responseBody.byteStream())
+                    value = parser.parseResponse(responseBody.byteStream()) as E?
                 }
             } catch (e: Exception) {
                 Logger.d("exception", e)
+                wasException = true
             }
 
-            v
+            ResponseObject(value, wasException)
         }
     }
 

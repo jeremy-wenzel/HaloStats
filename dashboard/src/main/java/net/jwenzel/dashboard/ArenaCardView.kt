@@ -1,6 +1,6 @@
 package net.jwenzel.dashboard
 
-import net.jeremywenzel.halostats.core.fragment.BaseView
+import net.jwenzel.coremvp.fragment.BaseView
 
 interface ArenaCardView: BaseView {
 }

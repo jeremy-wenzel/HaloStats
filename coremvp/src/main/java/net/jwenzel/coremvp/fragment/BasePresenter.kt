@@ -1,4 +1,4 @@
-package net.jeremywenzel.halostats.core.fragment
+package net.jwenzel.coremvp.fragment
 
 interface BasePresenter<V : BaseView> {
     fun attachView(view: V)

@@ -1,7 +1,7 @@
 package net.jwenzel.dashboard
 
-import net.jeremywenzel.halostats.core.fragment.BasePresenter
-import net.jeremywenzel.halostats.core.fragment.BasePresenterImpl
+import net.jwenzel.coremvp.fragment.BasePresenter
+import net.jwenzel.coremvp.fragment.BasePresenterImpl
 
 class DashboardPresenterImpl: BasePresenterImpl<DashboardView>(), DashboardPresenter {
 }
