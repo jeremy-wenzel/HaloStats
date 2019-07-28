@@ -6,7 +6,8 @@ class ArenaServiceRecord(@SerializedName("TotalKills")val kills: Int,
                          @SerializedName("TotalDeaths")val deaths: Int,
                          @SerializedName("TotalAssists")val assists: Int,
                          @SerializedName("TotalGamesWon")val wins: Int,
-                         @SerializedName("TotalGamesLost")val loses: Int) {
+                         @SerializedName("TotalGamesLost")val losses: Int,
+                         @SerializedName("TotalGamesTied")val draws: Int) {
     // Things we will need
     // Total Kills
     // Total Deaths
@@ -16,6 +17,6 @@ class ArenaServiceRecord(@SerializedName("TotalKills")val kills: Int,
     // Kill death ratio?
 
     override fun toString(): String {
-        return "$kills $deaths $assists $wins $loses"
+        return "$kills $deaths $assists $wins $losses"
     }
 }

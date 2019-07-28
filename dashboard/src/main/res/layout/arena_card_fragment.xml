@@ -23,25 +23,16 @@
 
 
     <LinearLayout
-        android:id="@+id/top_row"
+        android:id="@+id/arena_card_value_first_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/arena_kills_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/arena_kills_title"/>
-            <TextView
-                android:id="@+id/arena_kills_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </LinearLayout>
+        android:orientation="horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/arena_card_value_second_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
 
     <View style="@style/Divider"/>
 </LinearLayout>

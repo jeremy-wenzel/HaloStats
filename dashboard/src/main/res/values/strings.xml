@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Dashboard</string>
+
+    <!--Arena Card-->
     <string name="arena_card_title">Arena</string>
     <string name="arena_kills_title">Kills</string>
+    <string name="arena_deaths_title">Deaths</string>
+    <string name="arena_assists_title">Assists</string>
+    <string name="arena_wins_title">Wins</string>
+    <string name="arena_losses_title">Losses</string>
+    <string name="arena_draws_title">Draws</string>
 </resources>

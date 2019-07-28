@@ -29,7 +29,7 @@ class ArenaServiceRecordProcessingTest: BaseProcessingTest() {
 
     @Test
     fun `Arena Service Record Deaths Parsing Test`() {
-        assertEquals(7205,serviceRecord.deaths)
+        assertEquals(7205, serviceRecord.deaths)
     }
 
     @Test
@@ -39,11 +39,16 @@ class ArenaServiceRecordProcessingTest: BaseProcessingTest() {
 
     @Test
     fun `Arena Service Record Wins Parsing Test`() {
-        assertEquals(296,serviceRecord.wins)
+        assertEquals(296, serviceRecord.wins)
     }
 
     @Test
-    fun `Arena Service Record Loses Parsing Test`() {
-        assertEquals(322,serviceRecord.loses)
+    fun `Arena Service Record Losses Parsing Test`() {
+        assertEquals(322, serviceRecord.losses)
+    }
+
+    @Test
+    fun `Arena Service Record Ties Parsing Test`() {
+        assertEquals(5, serviceRecord.draws)
     }
 }
