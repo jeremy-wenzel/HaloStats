@@ -2,5 +2,5 @@ package net.jwenzel.dashboard.dashboard
 
 import net.jwenzel.coremvp.fragment.BasePresenterImpl
 
-abstract class DashboardCardPresenterImpl<T: DashboardCardView>(view: T): BasePresenterImpl<T>(view), DashboardCardPresenter<T> {
+abstract class DashboardCardPresenterImpl<V: DashboardCardView>(view: V): BasePresenterImpl<V>(view), DashboardCardPresenter<V> {
 }

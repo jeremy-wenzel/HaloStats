@@ -9,4 +9,10 @@
     <string name="arena_wins_title">Wins</string>
     <string name="arena_losses_title">Losses</string>
     <string name="arena_draws_title">Draws</string>
+
+    <!-- Match History Card -->
+    <string name="match_history_card_title">Match History</string>
+
+    <!-- Medals Card -->
+    <string name="medals_card_title">Medals</string>
 </resources>
