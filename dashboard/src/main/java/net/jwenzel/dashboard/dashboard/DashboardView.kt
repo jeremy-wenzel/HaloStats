@@ -1,4 +1,4 @@
-package net.jwenzel.dashboard
+package net.jwenzel.dashboard.dashboard
 
 import net.jwenzel.coremvp.fragment.BaseView
 

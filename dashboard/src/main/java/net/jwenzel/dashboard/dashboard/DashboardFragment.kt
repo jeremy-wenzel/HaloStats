@@ -1,10 +1,12 @@
-package net.jwenzel.dashboard
+package net.jwenzel.dashboard.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import net.jwenzel.coremvp.fragment.BaseMvpFragment
+import net.jwenzel.dashboard.arena_card_fragment.ArenaCardFragment
+import net.jwenzel.dashboard.R
 
 class DashboardFragment: BaseMvpFragment<DashboardView, DashboardPresenter>(), DashboardView {
     override fun createPresenter(): DashboardPresenter = DashboardPresenterImpl(this)

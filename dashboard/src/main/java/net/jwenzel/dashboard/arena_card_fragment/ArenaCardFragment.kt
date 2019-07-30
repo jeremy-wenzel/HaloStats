@@ -1,4 +1,4 @@
-package net.jwenzel.dashboard
+package net.jwenzel.dashboard.arena_card_fragment
 
 import android.os.Bundle
 import android.support.annotation.StringRes
@@ -8,17 +8,17 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import net.jeremywenzel.halostats.core.haloapi.ArenaServiceRecord
-import net.jwenzel.coremvp.fragment.BaseMvpFragment
+import net.jwenzel.dashboard.R
+import net.jwenzel.dashboard.dashboard.DashboardCardFragment
 
-class ArenaCardFragment: BaseMvpFragment<ArenaCardView, ArenaCardPresenter>(), ArenaCardView {
-
+class ArenaCardFragment: DashboardCardFragment<ArenaCardView, ArenaCardPresenter>(), ArenaCardView {
     private lateinit var arenaFirstFrameRow: LinearLayout
     private lateinit var arenaSecondFrameRow: LinearLayout
 
     override fun createPresenter(): ArenaCardPresenter = ArenaCardPresenterImpl(this)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.arena_card_fragment, container, false)
+        val view = super.onCreateView(inflater, container, savedInstanceState)!!
         arenaFirstFrameRow = view.findViewById(R.id.arena_card_value_first_row)
         arenaSecondFrameRow = view.findViewById(R.id.arena_card_value_second_row)
         return view
@@ -43,4 +43,8 @@ class ArenaCardFragment: BaseMvpFragment<ArenaCardView, ArenaCardPresenter>(), A
 
         frameRow.addView(arenaCardValueFrame)
     }
+
+    override fun getCardLayoutId(): Int = R.layout.arena_card_fragment
+
+    override fun getCardTitleId(): Int = R.string.arena_card_title
 }
