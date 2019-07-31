@@ -1,13 +1,14 @@
 package net.jeremywenzel.halostats.webapi.requests
 
 import net.jeremywenzel.halostats.core.Constants
+import net.jeremywenzel.halostats.webapi.parsers.BaseResponseParser
 import okhttp3.HttpUrl
 import okhttp3.Request
 
 /**
  *
  */
-abstract class BaseHaloRequest<T> {
+abstract class BaseHaloRequest<T: BaseResponseParser<*>> {
 
     companion object {
         val apiKeyHeader = "Ocp-Apim-Subscription-Key"
