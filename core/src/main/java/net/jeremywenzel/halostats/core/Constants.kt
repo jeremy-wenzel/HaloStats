@@ -14,7 +14,7 @@ object Constants {
     val CSR_DESIGNATIONS = "/csr-designations"
     val ENEMIES = "enemies"
     val FLEXIBLE_STATS = "/flexible-stats"
-    val GAME_BASE_VARIANTS = "/game-base-variants"
+    val GAME_BASE_VARIANTS = "game-base-variants"
     val GAME_VARIANTS = "/game-variants"
     val IMPULSES = "/impulses"
     val MAP_VARIANTS = "/map-variants"
