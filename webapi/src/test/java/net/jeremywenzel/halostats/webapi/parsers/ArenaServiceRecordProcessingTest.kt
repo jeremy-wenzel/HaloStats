@@ -51,4 +51,15 @@ class ArenaServiceRecordProcessingTest: BaseProcessingTest() {
     fun `Arena Service Record Ties Parsing Test`() {
         assertEquals(5, serviceRecord.draws)
     }
+
+    @Test
+    fun `Arena Medal Award Not Null`() {
+        assertNotNull(serviceRecord.medalAwards)
+    }
+
+    @Test
+    fun `Arena Medal Award First Medal`() {
+        assertEquals(3001183151, serviceRecord.medalAwards[0].medalId)
+        assertEquals(73, serviceRecord.medalAwards[0].count)
+    }
 }

@@ -7,7 +7,8 @@ class ArenaServiceRecord(@SerializedName("TotalKills")val kills: Int,
                          @SerializedName("TotalAssists")val assists: Int,
                          @SerializedName("TotalGamesWon")val wins: Int,
                          @SerializedName("TotalGamesLost")val losses: Int,
-                         @SerializedName("TotalGamesTied")val draws: Int) {
+                         @SerializedName("TotalGamesTied")val draws: Int,
+                         @SerializedName("MedalAwards")val medalAwards: Array<MedalAward>) {
     // Things we will need
     // Total Kills
     // Total Deaths
@@ -19,4 +20,7 @@ class ArenaServiceRecord(@SerializedName("TotalKills")val kills: Int,
     override fun toString(): String {
         return "$kills $deaths $assists $wins $losses"
     }
+
+    class MedalAward(@SerializedName("MedalId")val medalId: Long,
+                     @SerializedName("Count")val count: Int)
 }

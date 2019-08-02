@@ -27,6 +27,7 @@ class MedalResponseParserTest: BaseProcessingTest() {
         assertEquals("Save your Oddball carrier by killing his attacker", medals[0].desc)
         assertEquals("Oddball", medals[0].classification)
         assertEquals(0, medals[0].difficulty)
+        assertEquals(1638349322, medals[0].id)
     }
 
     @Test
