@@ -50,8 +50,9 @@ class MatchHistoryCardPresenterImpl(view: MatchHistoryCardView): DashboardCardPr
     private fun onMatchHistoryRequestSuccess(matches: Array<MatchHistoryItem>) {
         Logger.d(matches[0].toString())
         val map = MultiplayerMap.getMapFromArrayWithGuid(multiplayerMaps, matches[0].mapId)
-        if (map != null && !isViewNull()) {
-            view?.showCard(matches[0], map)
+        val gameBaseVariant = GameBaseVariant.getGameBaseVariantFromArrayAndId(gameBaseVariants, matches[0].gameTypeId)
+        if (map != null && gameBaseVariant != null && !isViewNull()) {
+            view?.showCard(matches[0], map, gameBaseVariant)
         }
     }
 }
