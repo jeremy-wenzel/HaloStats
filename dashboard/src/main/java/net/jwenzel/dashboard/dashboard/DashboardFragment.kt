@@ -13,12 +13,14 @@ import net.jwenzel.dashboard.medals_fragment.MedalsCardFragment
 class DashboardFragment: BaseMvpFragment<DashboardView, DashboardPresenter>(), DashboardView {
     override fun createPresenter(): DashboardPresenter = DashboardPresenterImpl(this)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.dashboard_fragment, container, false)
-        requireFragmentManager().beginTransaction().add(R.id.card_layout, ArenaCardFragment()).commit()
-        requireFragmentManager().beginTransaction().add(R.id.card_layout, MatchHistoryCardFragment()).commit()
-        requireFragmentManager().beginTransaction().add(R.id.card_layout, MedalsCardFragment()).commit()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        childFragmentManager.beginTransaction().add(R.id.card_layout, ArenaCardFragment()).commit()
+        childFragmentManager.beginTransaction().add(R.id.card_layout, MatchHistoryCardFragment()).commit()
+        childFragmentManager.beginTransaction().add(R.id.card_layout, MedalsCardFragment()).commit()
+    }
 
-        return view
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.dashboard_fragment, container, false)
     }
 }

@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="headlineTextColor">#d1d1d1</color>
+    <color name="boldTextColor">#d1d1d1</color>
+    <color name="normalTextColor">#919191</color>
+    <color name="background">#1f1f1f</color>
+
+    <color name="card_background">#2f2f2f</color>
 </resources>

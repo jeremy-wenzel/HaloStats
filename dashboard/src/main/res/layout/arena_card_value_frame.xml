@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:textSize="@dimen/arena_card_title"
-        android:textColor="@color/arena_item_title"/>
+        android:textColor="?attr/boldTextColor"
+        android:textSize="?attr/boldTextSize"/>
 
     <TextView
         android:id="@+id/arena_card_value_frame_value"
