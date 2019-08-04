@@ -2,16 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/arena_card_value_frame_title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="@dimen/arena_card_title"
+        android:textColor="@color/arena_item_title"/>
 
     <TextView
         android:id="@+id/arena_card_value_frame_value"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center"/>
 
 </LinearLayout>

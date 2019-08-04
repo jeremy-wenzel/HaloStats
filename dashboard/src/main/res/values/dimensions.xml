@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="arena_item_title">#292929</color>
+    <dimen name="arena_card_title">18sp</dimen>
 </resources>

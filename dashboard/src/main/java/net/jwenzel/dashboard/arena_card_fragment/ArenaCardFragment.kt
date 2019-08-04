@@ -30,10 +30,13 @@ class ArenaCardFragment: DashboardCardFragment<ArenaCardView, ArenaCardPresenter
         addNewFrameValueToRow(arenaServiceRecord.deaths, R.string.arena_deaths_title, arenaFirstFrameRow)
         addNewFrameValueToRow(arenaServiceRecord.assists, R.string.arena_assists_title, arenaFirstFrameRow)
 
-        arenaSecondFrameRow.removeAllViews()
-        addNewFrameValueToRow(arenaServiceRecord.wins, R.string.arena_wins_title, arenaSecondFrameRow)
-        addNewFrameValueToRow(arenaServiceRecord.losses, R.string.arena_losses_title, arenaSecondFrameRow)
-        addNewFrameValueToRow(arenaServiceRecord.draws, R.string.arena_draws_title, arenaSecondFrameRow)
+//        arenaSecondFrameRow.removeAllViews()
+//        addNewFrameValueToRow(arenaServiceRecord.wins, R.string.arena_wins_title, arenaSecondFrameRow)
+//        addNewFrameValueToRow(arenaServiceRecord.losses, R.string.arena_losses_title, arenaSecondFrameRow)
+//        addNewFrameValueToRow(arenaServiceRecord.draws, R.string.arena_draws_title, arenaSecondFrameRow)
+        addNewFrameValueToRow(arenaServiceRecord.wins, R.string.arena_wins_title, arenaFirstFrameRow)
+        addNewFrameValueToRow(arenaServiceRecord.losses, R.string.arena_losses_title, arenaFirstFrameRow)
+        addNewFrameValueToRow(arenaServiceRecord.draws, R.string.arena_draws_title, arenaFirstFrameRow)
     }
 
     private fun addNewFrameValueToRow(value: Any, @StringRes title: Int, frameRow: LinearLayout) {
