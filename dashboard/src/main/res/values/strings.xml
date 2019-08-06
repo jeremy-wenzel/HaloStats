@@ -12,7 +12,7 @@
 
     <!-- Match History Card -->
     <string name="match_history_card_title">Match History</string>
-
+    <string name="match_history_card_game_and_map">%s - %s</string>
     <!-- Medals Card -->
     <string name="medals_card_title">Medals</string>
 </resources>
