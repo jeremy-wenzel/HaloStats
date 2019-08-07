@@ -6,6 +6,7 @@
     android:layout_margin="8dp">
 
     <RelativeLayout
+        android:id="@+id/dashboard_card_header"
         android:padding="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

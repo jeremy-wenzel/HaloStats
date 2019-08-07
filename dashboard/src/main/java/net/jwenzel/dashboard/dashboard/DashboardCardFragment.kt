@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import net.jwenzel.coremvp.BaseActivity
 import net.jwenzel.coremvp.fragment.BaseMvpFragment
 import net.jwenzel.dashboard.R
 
 abstract class DashboardCardFragment<V: DashboardCardView, P: DashboardCardPresenter<V>>: BaseMvpFragment<V, P>(), DashboardCardView {
+    private lateinit var dashboardCardHeader: View
     private lateinit var titleView: TextView
     private lateinit var cardView: View
     private lateinit var cardContainer: ViewGroup
@@ -23,6 +25,9 @@ abstract class DashboardCardFragment<V: DashboardCardView, P: DashboardCardPrese
         cardContainer.removeAllViews()
         cardContainer.addView(cardView)
 
+        dashboardCardHeader = view.findViewById(R.id.dashboard_card_header)
+        dashboardCardHeader.setOnClickListener { mPresenter.onCardHeaderClicked() }
+
         return view
     }
 
@@ -36,4 +41,12 @@ abstract class DashboardCardFragment<V: DashboardCardView, P: DashboardCardPrese
      * Gets the title string res id of the card to be displayed
      */
     protected abstract fun getCardTitleId(): Int
+
+    override fun launchCardFragment() {
+        if (activity != null) {
+            (activity as BaseActivity).startFragment(getFragmentForCardHeaderClick(), true)
+        }
+    }
+
+    protected abstract fun getFragmentForCardHeaderClick(): DashboardCardFragment<V, P>
 }

@@ -28,7 +28,7 @@ class MedalsCardFragment: DashboardCardFragment<MedalsCardView, MedalsCardPresen
 
     override fun showMedals(medalsMetadata: Array<Medal>, playerMedals: Array<ArenaServiceRecord.MedalAward>) {
         val medalsToShow = ArrayList<Medal>()
-        for (i in 0 until 5) {
+        for (i in 0 until 6) {
             if (i >= playerMedals.size) {
                 break
             }
@@ -44,7 +44,9 @@ class MedalsCardFragment: DashboardCardFragment<MedalsCardView, MedalsCardPresen
             textView.text = medalsToShow[i].name
             medalsLayout.addView(layout)
         }
+    }
 
-
+    override fun getFragmentForCardHeaderClick(): DashboardCardFragment<MedalsCardView, MedalsCardPresenter> {
+        return MedalsCardFragment()
     }
 }

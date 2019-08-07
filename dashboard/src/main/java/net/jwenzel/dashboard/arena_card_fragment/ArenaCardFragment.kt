@@ -43,4 +43,8 @@ class ArenaCardFragment: DashboardCardFragment<ArenaCardView, ArenaCardPresenter
     override fun getCardLayoutId(): Int = R.layout.arena_card_fragment
 
     override fun getCardTitleId(): Int = R.string.arena_card_title
+
+    override fun getFragmentForCardHeaderClick(): DashboardCardFragment<ArenaCardView, ArenaCardPresenter> {
+        return ArenaCardFragment()
+    }
 }

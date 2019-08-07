@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/dashboard_profile_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="ContentDescription" />
-
-    <TextView
-        android:id="@+id/dashboard_gamertag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test GamerTage"/>
-
-    <TextView
-        android:id="@+id/dashboard_company"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test Company"/>
-
-
-    <LinearLayout
-        android:id="@+id/card_layout"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/dashboard_profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/dashboard_gamertag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test GamerTage" />
+
+        <TextView
+            android:id="@+id/dashboard_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test Company" />
+
+
+        <LinearLayout
+            android:id="@+id/card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,17 +1,12 @@
 package net.jeremywenzel.halostats
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import net.jwenzel.coremvp.BaseActivity
 import net.jwenzel.dashboard.dashboard.DashboardFragment
 
-class MainActivity : AppCompatActivity() {
-
+class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val fragment = DashboardFragment()
-        val fragmentManager = supportFragmentManager
-        fragmentManager.beginTransaction().add(R.id.main_activity_fragment_container, fragment).commit()
+        startFragment(DashboardFragment())
     }
 }

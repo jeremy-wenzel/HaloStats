@@ -53,4 +53,8 @@ class MatchHistoryCardFragment: DashboardCardFragment<MatchHistoryCardView, Matc
             false -> ContextCompat.getColor(context!!, R.color.defeat)
         })
     }
+
+    override fun getFragmentForCardHeaderClick(): DashboardCardFragment<MatchHistoryCardView, MatchHistoryCardPresenter> {
+        return MatchHistoryCardFragment()
+    }
 }

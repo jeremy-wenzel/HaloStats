@@ -6,7 +6,8 @@ import net.jeremywenzel.halostats.core.util.Logger
 
 abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fragment() {
 
-    private lateinit var mPresenter: BasePresenter<V>
+    protected lateinit var mPresenter: P
+        private set
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
