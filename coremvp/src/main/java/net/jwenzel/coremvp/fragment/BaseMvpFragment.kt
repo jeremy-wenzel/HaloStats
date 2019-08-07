@@ -2,6 +2,9 @@ package net.jwenzel.coremvp.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import net.jeremywenzel.halostats.core.util.Logger
 
 abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fragment() {
@@ -12,6 +15,11 @@ abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fra
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mPresenter = createPresenter()
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        mPresenter.attachView(this as V)
+        return null
     }
 
     protected abstract fun createPresenter(): P

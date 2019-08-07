@@ -10,7 +10,8 @@ import java.lang.Exception
 
 object RequestProcessor {
 
-    var mClient = OkHttpClient()
+    private val mClient = OkHttpClient()
+    private val TOO_MANY_REQUESTS = 429
 
     suspend fun <T : BaseResponseParser<*>, E> makeRequest(request: BaseHaloRequest<T>): ResponseObject<E> {
 
@@ -18,13 +19,20 @@ object RequestProcessor {
             var value : E? = null
             var wasException= false
             try {
-                val response: Response = mClient.newCall(request.getOkHttpRequest()).execute()
-                Logger.d(response.toString())
-                val parser = request.getResponseParser()
-                val responseBody = response.body()
-                if (responseBody != null) {
-                    value = parser.parseResponse(responseBody.byteStream()) as E?
-                }
+                do {
+                    val response: Response = mClient.newCall(request.getOkHttpRequest()).execute()
+                    Logger.d(response.toString())
+                    if (response.code() == TOO_MANY_REQUESTS) {
+                        Thread.sleep(10500)
+                        continue
+                    }
+                    val parser = request.getResponseParser()
+                    val responseBody = response.body()
+                    if (responseBody != null) {
+                        value = parser.parseResponse(responseBody.byteStream()) as E?
+                    }
+                    break
+                } while (true)
             } catch (e: Exception) {
                 Logger.d("exception", e)
                 wasException = true

@@ -16,6 +16,8 @@ abstract class DashboardCardFragment<V: DashboardCardView, P: DashboardCardPrese
     private lateinit var cardContainer: ViewGroup
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        super.onCreateView(inflater, container, savedInstanceState)
+
         val view = inflater.inflate(R.layout.dashboard_card_fragment, container, false)
         titleView = view.findViewById(R.id.card_title)
         titleView.text = getString(getCardTitleId())

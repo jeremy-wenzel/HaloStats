@@ -7,6 +7,10 @@ import net.jeremywenzel.halostats.webapi.requests.BaseHaloRequest
 
 abstract class BasePresenterImpl<V: BaseView>(protected var view: V?) : BasePresenter<V> {
 
+    override fun attachView(view: V) {
+        this.view = view
+    }
+
     override fun onStart() {
 
     }
