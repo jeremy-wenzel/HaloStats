@@ -4,10 +4,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import net.jeremywenzel.halostats.core.haloapi.GameBaseVariant
-import net.jeremywenzel.halostats.core.haloapi.GamerTag
-import net.jeremywenzel.halostats.core.haloapi.MatchHistoryItem
-import net.jeremywenzel.halostats.core.haloapi.MultiplayerMap
+import net.jeremywenzel.halostats.core.haloapi.*
 import net.jeremywenzel.halostats.core.util.Logger
 import net.jeremywenzel.halostats.webapi.requests.GameBaseVariantRequest
 import net.jeremywenzel.halostats.webapi.requests.MatchHistoryRequest
@@ -51,8 +48,9 @@ class MatchHistoryCardPresenterImpl(view: MatchHistoryCardView): DashboardCardPr
         Logger.d(matches[0].toString())
         val map = MultiplayerMap.getMapFromArrayWithGuid(multiplayerMaps, matches[0].mapId)
         val gameBaseVariant = GameBaseVariant.getGameBaseVariantFromArrayAndId(gameBaseVariants, matches[0].gameTypeId)
-        if (map != null && gameBaseVariant != null && !isViewNull()) {
-            view?.showCard(matches[0], map, gameBaseVariant)
+        val playersTeam = MatchHistoryItemTeam.getTeamFromPlayerInfo(matches[0].teams, matches[0].players[0])
+        if (map != null && gameBaseVariant != null && !isViewNull() && playersTeam != null) {
+            view?.showCard(matches[0], map, gameBaseVariant, playersTeam.rank == 1)
         }
     }
 }

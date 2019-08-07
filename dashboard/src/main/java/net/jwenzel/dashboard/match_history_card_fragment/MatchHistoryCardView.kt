@@ -7,5 +7,5 @@ import net.jwenzel.dashboard.dashboard.DashboardCardView
 
 interface MatchHistoryCardView: DashboardCardView {
 
-    fun showCard(matchHistoryItem: MatchHistoryItem, multiplayerMap: MultiplayerMap, gameBaseVariant: GameBaseVariant)
+    fun showCard(matchHistoryItem: MatchHistoryItem, multiplayerMap: MultiplayerMap, gameBaseVariant: GameBaseVariant, isVictory: Boolean)
 }
