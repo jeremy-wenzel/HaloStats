@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MatchHistory</string>
+
+    <string name="match_history_card_game_and_map">%s - %s</string>
+
+    <string name="match_history_card_victory">Victory</string>
+    <string name="match_history_card_defeat">Defeat</string>
+</resources>

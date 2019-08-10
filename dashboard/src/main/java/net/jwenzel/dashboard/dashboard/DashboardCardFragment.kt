@@ -1,6 +1,7 @@
 package net.jwenzel.dashboard.dashboard
 
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,5 +51,5 @@ abstract class DashboardCardFragment<V: DashboardCardView, P: DashboardCardPrese
         }
     }
 
-    protected abstract fun getFragmentForCardHeaderClick(): DashboardCardFragment<V, P>
+    protected abstract fun getFragmentForCardHeaderClick(): Fragment
 }

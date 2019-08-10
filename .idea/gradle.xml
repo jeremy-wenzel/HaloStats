@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/coremvp" />
             <option value="$PROJECT_DIR$/dashboard" />
+            <option value="$PROJECT_DIR$/matchhistory" />
             <option value="$PROJECT_DIR$/webapi" />
           </set>
         </option>

@@ -2,6 +2,8 @@
 <resources>
     <declare-styleable name="BaseTheme">
         <attr name="headlineTextColor" format="reference|color" />
+        <attr name="boldTextColor" format="reference|color"/>
+        <attr name="normalTextColor" format="reference|color"/>
         <attr name="cardBackgroundColor" format="reference|color"/>
         <attr name="cardTitleSize" format="reference|dimension"/>
         <attr name="boldTextSize" format="reference|dimension"/>

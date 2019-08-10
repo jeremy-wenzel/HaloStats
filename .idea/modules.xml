@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/coremvp/coremvp.iml" filepath="$PROJECT_DIR$/coremvp/coremvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/dashboard/dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/matchhistory/matchhistory.iml" filepath="$PROJECT_DIR$/matchhistory/matchhistory.iml" />
       <module fileurl="file://$PROJECT_DIR$/webapi/webapi.iml" filepath="$PROJECT_DIR$/webapi/webapi.iml" />
     </modules>
   </component>
