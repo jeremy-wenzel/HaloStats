@@ -2,12 +2,12 @@ package net.jwenzel.coremvp.fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import net.jeremywenzel.halostats.core.util.Logger
+import net.jwenzel.coremvp.BaseActivity
+import java.lang.IllegalStateException
 
-abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fragment() {
+abstract class BaseMvpFragment<V : BaseView, P : BasePresenter<V>> : BaseView, Fragment() {
 
     protected lateinit var mPresenter: P
         private set
@@ -19,7 +19,16 @@ abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fra
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         mPresenter.attachView(this as V)
+        getBaseActivity().setBackButton(shouldShowBackButton)
         return null
+    }
+
+    protected fun getBaseActivity(): BaseActivity {
+        if (activity == null || activity !is BaseActivity) {
+            throw IllegalStateException("BaseActivity is null")
+        }
+
+        return activity as BaseActivity
     }
 
     protected abstract fun createPresenter(): P
@@ -59,4 +68,9 @@ abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fra
         Logger.d("in onDestroy")
         mPresenter.onDestroy()
     }
+
+    /**
+     * Should the fragment show the back button
+     */
+    open val shouldShowBackButton: Boolean = false
 }

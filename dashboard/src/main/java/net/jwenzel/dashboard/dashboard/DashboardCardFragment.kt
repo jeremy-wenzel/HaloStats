@@ -6,11 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import net.jwenzel.coremvp.BaseActivity
 import net.jwenzel.coremvp.fragment.BaseMvpFragment
 import net.jwenzel.dashboard.R
 
-abstract class DashboardCardFragment<V: DashboardCardView, P: DashboardCardPresenter<V>>: BaseMvpFragment<V, P>(), DashboardCardView {
+abstract class DashboardCardFragment<V : DashboardCardView, P : DashboardCardPresenter<V>> : BaseMvpFragment<V, P>(), DashboardCardView {
     private lateinit var dashboardCardHeader: View
     private lateinit var titleView: TextView
     private lateinit var cardView: View
@@ -46,9 +45,7 @@ abstract class DashboardCardFragment<V: DashboardCardView, P: DashboardCardPrese
     protected abstract fun getCardTitleId(): Int
 
     override fun launchCardFragment() {
-        if (activity != null) {
-            (activity as BaseActivity).startFragment(getFragmentForCardHeaderClick(), true)
-        }
+        getBaseActivity().startFragment(getFragmentForCardHeaderClick(), shouldAddToBackStack = true)
     }
 
     protected abstract fun getFragmentForCardHeaderClick(): Fragment

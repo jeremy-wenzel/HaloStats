@@ -7,6 +7,6 @@ import net.jwenzel.dashboard.dashboard.DashboardFragment
 class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        startFragment(DashboardFragment())
+        startFragment(DashboardFragment(), shouldAddToBackStack = false)
     }
 }

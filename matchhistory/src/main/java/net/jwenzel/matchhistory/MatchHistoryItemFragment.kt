@@ -24,6 +24,7 @@ class MatchHistoryItemFragment: BaseMvpFragment<MatchHistoryItemView, MatchHisto
     override fun createPresenter(): MatchHistoryItemPresenter = MatchHistoryItemPresenterImpl(this)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        super.onCreateView(inflater, container, savedInstanceState)
         val view = inflater.inflate(R.layout.match_history_item_fragment, container, false)
         mapImageView = view.findViewById(R.id.match_history_map_image)
         gameTimeTextView = view.findViewById(R.id.match_history_game_time)
@@ -48,4 +49,6 @@ class MatchHistoryItemFragment: BaseMvpFragment<MatchHistoryItemView, MatchHisto
             false -> ContextCompat.getColor(context!!, R.color.defeat)
         })
     }
+
+    override val shouldShowBackButton: Boolean = false
 }
