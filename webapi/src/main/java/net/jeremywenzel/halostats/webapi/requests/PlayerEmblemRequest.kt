@@ -2,12 +2,11 @@ package net.jeremywenzel.halostats.webapi.requests
 
 import net.jeremywenzel.halostats.core.Constants
 import net.jeremywenzel.halostats.core.haloapi.GamerTag
-import net.jeremywenzel.halostats.webapi.GlideUrl
 import java.net.URLEncoder
 
-class PlayerEmblemRequest(private val gamerTag: GamerTag, private val imageSize: Int): GlideUrl {
+class PlayerEmblemRequest(private val gamerTag: GamerTag, private val imageSize: Int) {
 
-    override fun getRequestUrl(): String {
+    fun getRequestUrl(): String {
         val builder = BaseHaloRequest.buildHaloBaseUrl()
         builder.addPathSegment(Constants.PROFILE)
                 .addPathSegment(Constants.H5)

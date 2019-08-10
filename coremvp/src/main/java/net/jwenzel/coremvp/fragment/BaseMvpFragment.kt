@@ -45,7 +45,7 @@ abstract class BaseMvpFragment<V: BaseView, P : BasePresenter<V>>: BaseView, Fra
     override fun onStop() {
         super.onStop()
         Logger.d("in onStop")
-        mPresenter.onStart()
+        mPresenter.onStop()
     }
 
     override fun onDestroyView() {
